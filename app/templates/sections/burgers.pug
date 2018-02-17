@@ -1,0 +1,43 @@
+section.section.burgers
+  .container
+    .burger-slider-wrap
+      .burger-slider__controls
+        a(href="#").burger-slider__btn.burger-slider__btn_next
+          +svg-icon('arrow-scroll', 'burger-slider__arrow')
+        a(href="#").burger-slider__btn.burger-slider__btn_prev
+          +svg-icon('arrow-scroll', 'burger-slider__arrow')
+      ul.burgers-slider.owl-carousel
+        - for (var i = 0; i < 4; i++)
+          li.burgers-slider__item
+            .ingredients
+              +svg-icon('burger', 'ingredients__icon')
+              .ingredients__icon-text Состав
+              .ingredients__dropdown
+                table.ingredients__table
+                  each item in burgers
+                    tr.ingredients__table-row
+                      td.ingredients__table-cell
+                        img(src=`./img/icons/${item[0]}.svg` alt="ingredients__table-icon")
+                      td.ingredients__table-cell
+                        .ingredients__table-icon= item[1]
+                      td.ingredients__table-cell
+                        .ingredients__table-icon= item[2]
+                a(href="").ingredients__close
+                  +svg-icon('close', 'ingredients__close-btn')
+            .burger-weight
+              .burger-weight__measure
+                .burger-weight__amount 1200
+              .burger-weight__title ккал
+
+            .burgers-slider__left
+              img(src=`./img/content/burgers/${i + 1}.png` alt="").burgers-slider__pic
+            .burgers-slider__right
+              .section__title.section__title_white Dark Beef Burger
+              .burgers-slider__text.text-block
+                p.
+                  Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+              .burgers-slider__options
+                .burgers-slider__price
+                  .burgers-slider__price-amount 500
+                  .burgers-slider__price-measure рублей
+                a(href="6").burgers-slider__buy.btn Заказать

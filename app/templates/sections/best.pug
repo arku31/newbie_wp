@@ -1,0 +1,15 @@
+section.section.best
+    .container
+        .section__title.section__title_black
+            | Мы лучшие
+        ul.best__list
+            each item in bests
+                li.best__item
+                    .best__icon
+                        +svg-icon(item[0], 'best__icon-pic', item[2])
+                    .best__desc
+                        .best__title= item[1]
+                        .best__text.text-block
+                            p.
+                                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                                

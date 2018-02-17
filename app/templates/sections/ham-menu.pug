@@ -1,0 +1,8 @@
+.hamburger-menu#hamburger-menu
+    .hamburger-menu__logo
+        a(href="#").logo
+          img(src="./img/icons/logo.svg")
+    .hamburger-menu__items
+        +nav('nav_hamburger')
+    a(href="#").hamburger-menu__close
+       +svg-icon('close', 'hamburger-menu__close-icon')

@@ -1,0 +1,24 @@
+//setups
+$onePage: true;
+
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+// setups
+@import "_misc/normalize.scss";
+@import "_misc/mixins";
+@import "_misc/fonts";
+@import "_misc/layout";
+@import "_misc/animations";
+
+//3rd party
+// @import "owl.carousel/dist/assets/owl.carousel.css";
+// @import "fullpage.js/dist/jquery.fullpage.css";
+// @import "fancybox/dist/css/jquery.fancybox.css";
+
+// blocks
+@import "blocks/**/*.scss";
+@import "widgets/**/*.scss";

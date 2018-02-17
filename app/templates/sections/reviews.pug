@@ -1,0 +1,14 @@
+section.section.reviews
+    ul.reviews__list
+        - for (var i = 0; i < 8; i++)
+            li.reviews__item
+                .review
+                    .review__photo(
+                        style=`background-image: url('./img/content/reviews/${i + 1}.jpg')`
+                    )
+                    .review__hover
+                        .review__title Константин Спилберг
+                        .review__shorttext.
+                            Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                        .review__button-wrap
+                            a(href="#full-review").review__view Подробнее

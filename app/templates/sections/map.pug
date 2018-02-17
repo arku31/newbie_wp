@@ -1,0 +1,13 @@
+section.section.map
+  .yandex-map#map
+  footer.footer
+    .container.footer__container
+      .footer__col
+        .footer__address Санкт-Петербург, ул.Бабушкина, д.12/1, 15
+        a(href="tel:+78123771377").footer__phone +7 (812) 377-13-77
+      .footer__col.footer__col_right
+        ul.socials
+          each social in ['vk', 'fb', 'inst', 'twitter']
+            li.socials__item
+              a(href="#").socials__link
+                +svg-icon(social, 'socials__link-icon', '#fff')

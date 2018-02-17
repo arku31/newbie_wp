@@ -1,0 +1,17 @@
+section.section.team
+    .team__section
+        .section__title Команда
+        ul.team-acco
+            each item in team
+                li.team-acco__item
+                    a(href="#").team-acco__trigger= item[0]
+                    .team-acco__content
+                      .team-acco__data
+                        .team-acco__pic
+                            .team-acco__img(style=`background-image: url('.${item[1]}')`)
+                        .team-acco__text
+                            .team-acco__title= item[2]
+                            .team-acco__text-content.
+                                С радостью поможет подобрать идеальный бургер и оформить заказ.
+
+

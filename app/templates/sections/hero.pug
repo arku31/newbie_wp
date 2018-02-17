@@ -1,0 +1,21 @@
+section.section.hero
+    .container
+        header.header
+            .header__logo
+                a(href="#").logo
+                    img(src="./img/icons/logo.svg" class="logo__icon")
+            .header__menu
+                +nav()
+            .header__links
+                a(href="" data-scroll-to="6").order-link.btn Заказать
+                a(href="").hamburger-menu-link
+                    .hamburger-menu-link__bars
+        .hero__container
+            .hero__content
+                .hero__left
+                    img(src="./img/content/burger.png" alt="").hero__img
+                .hero__right
+                    .section__title Мы делаем
+                    .hero__desc Натуральные бургеры
+    a(href="#" data-scroll-to="1").down-arrow
+        +svg-icon('arrow-scroll', 'down-arrow__icon')

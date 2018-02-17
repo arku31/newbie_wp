@@ -1,0 +1,19 @@
+mixin nav(modificator)
+    nav.nav(class=modificator)
+        - items = ["о нас", "бургеры", "команда", "меню", "отзывы", "контакты"]
+        ul.nav__list
+            each item, index in items
+                li.nav__item
+                    if item == 'контакты'
+                        a(href="" data-scroll-to=`${index + 2}`).nav__link= item
+                    else
+                        a(href="" data-scroll-to=`${index + 1}`).nav__link= item
+
+
+mixin svg-icon(iconName, iconClass, iconFillColor)
+    if iconFillColor
+        svg(class=iconClass, style=`fill: ${iconFillColor}`)
+            use(xlink:href=`./img/sprite/sprite.svg#${iconName}`)
+    else
+        svg(class=iconClass)
+            use(xlink:href=`./img/sprite/sprite.svg#${iconName}`)

@@ -1,0 +1,50 @@
+include ./mixins/mixins
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content="IE=edge,chrome=1")
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        title
+            block title
+
+        //build:css ./css/vendors.min.css
+        link(rel="stylesheet" href="../../../node_modules/owl.carousel/dist/assets/owl.carousel.css")
+        link(rel="stylesheet" href="../../../node_modules/fullpage.js/dist/jquery.fullpage.css")
+        link(rel="stylesheet" href="../../..//node_modules/fancybox/dist/css/jquery.fancybox.css")
+        //endbuild
+
+        link(rel="stylesheet" href="./css/main.min.css")
+    body
+        .wrapper
+            .maincontent
+                block content
+
+        include ./sections/ham-menu
+
+        ul.fixed-menu
+            - for (var i = 0; i < 8; i++)
+                li.fixed-menu__item
+                    a(href="" data-scroll-to=`${i}`).fixed-menu__link
+
+        .full-review.popup#full-review
+            a(href="#").full-review__close
+              +svg-icon('close', 'full-review__close-btn')
+            .full-review__inner
+                .full-review__title Констнтин Спилберг
+                .full-review__content.
+                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+
+        .status-popup.popup#success
+            .status-popup__inner
+                .status-popup__message Сообщение отправлено
+                a(href="#").status-popup__close.btn Закрыть
+
+        .status-popup.popup#error
+            .status-popup__inner
+                .status-popup__message.error-message Произошла ошибка
+                a(href="#").status-popup__close.btn Закрыть
+
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src="./js/main.min.js")
